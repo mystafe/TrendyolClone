@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="https://cdn.dsmcdn.com/web/production/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <script src="https://kit.fontawesome.com/800a640f7c.js" crossorigin="anonymous"></script>
+
+    <title>Trendyol Clone</title>
+</head>
+
+<body>
+
+    <header class="container">
+
+        <div class="header pt-4 ">
+            <div class="gap-2 d-flex align-items-center">
+
+                <div class="col col-2 ">
+                    <a class="text-decoration-none" href="#">
+                        <img class="logo col-8" src="/images/ty-web.svg" alt="">
+                    </a>
+                </div>
+
+                <div class="col col-5 text-dark">
+                    <input data-testid="suggestion" type="text"
+                        class="text-danger position-relative rounded-2 w-100 bg-light fs-5 text-danger  outline-danger"
+                        tabindex="1" autocomplete="off" maxlength="50"
+                        placeholder=" Aradığınız ürün, kategori veya markayı yazınız" value="">
+
+                    <span
+                        class="text-danger opacity-75 fs-5  position-absolute  start-25 translate-middle-x pt-1 pe-5"><i
+                            class="fa fa-magnifying-glass"></i></span>
+
+                </div>
+
+
+                <div class="col col-1 ms-auto">
+                    <i class="fa-regular fa-user"></i> Hesabım
+                </div>
+
+                <div class="col col-1 ms-auto">
+                    <i class="fa-regular fa-heart"></i> Favorilerim
+                </div>
+
+                <div class="col col-1 ms-auto">
+                    <i class="fa-solid fa-cart-shopping"></i> Basket
+                </div>
+
+            </div>
+        </div>
+
+        <div class="navbar nav">
+
+            <div class="dropdown">
+                <button class="btn bg-white btn-outline-white border-none text-dark" type="button" id="dropdownMenu2"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Kadın
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <li><button class="dropdown-item" type="button">Giyim</button></li>
+                    <li><button class="dropdown-item" type="button">Ayakkabı</button></li>
+                    <li><button class="dropdown-item" type="button">Aksesuar Çanta </button></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn bg-light btn-outline-light text-dark btn-secondary" type="button" id="dropdownMenu2"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Erkek
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <li><button class="dropdown-item" type="button">Giyim</button></li>
+                    <li><button class="dropdown-item" type="button">Ayakkabı</button></li>
+                    <li><button class="dropdown-item" type="button">Aksesuar Çanta </button></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn bg-light btn-outline-light text-dark btn-secondary" type="button" id="dropdownMenu2"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Anne & Çocuk
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <li><button class="dropdown-item" type="button">Giyim</button></li>
+                    <li><button class="dropdown-item" type="button">Ayakkabı</button></li>
+                    <li><button class="dropdown-item" type="button">Aksesuar Çanta </button></li>
+                </ul>
+            </div>
+
+            <div class="dropdown">
+                <button class="btn bg-light btn-outline-light text-dark btn-secondary" type="button" id="dropdownMenu2"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Ev & Mobilya
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <li><button class="dropdown-item" type="button">Giyim</button></li>
+                    <li><button class="dropdown-item" type="button">Ayakkabı</button></li>
+                    <li><button class="dropdown-item" type="button">Aksesuar Çanta </button></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn bg-light btn-outline-light text-dark btn-secondary" type="button" id="dropdownMenu2"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Süpermarket
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <li><button class="dropdown-item" type="button">Giyim</button></li>
+                    <li><button class="dropdown-item" type="button">Ayakkabı</button></li>
+                    <li><button class="dropdown-item" type="button">Aksesuar Çanta </button></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn bg-light btn-outline-light text-dark btn-secondary" type="button" id="dropdownMenu2"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Kozmetik
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <li><button class="dropdown-item" type="button">Giyim</button></li>
+                    <li><button class="dropdown-item" type="button">Ayakkabı</button></li>
+                    <li><button class="dropdown-item" type="button">Aksesuar Çanta </button></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn bg-light btn-outline-light text-dark btn-secondary" type="button" id="dropdownMenu2"
+                    data-bs-toggle="dropdown" aria-expanded="false">Ayakkabı & Çanta
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <li><button class="dropdown-item" type="button">Giyim</button></li>
+                    <li><button class="dropdown-item" type="button">Ayakkabı</button></li>
+                    <li><button class="dropdown-item" type="button">Aksesuar Çanta </button></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn bg-light btn-outline-light text-dark btn-secondary" type="button" id="dropdownMenu2"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Saat & Aksesuar
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <li><button class="dropdown-item" type="button">Giyim</button></li>
+                    <li><button class="dropdown-item" type="button">Ayakkabı</button></li>
+                    <li><button class="dropdown-item" type="button">Aksesuar Çanta </button></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn bg-light btn-outline-light text-dark btn-secondary" type="button" id="dropdownMenu2"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Elektronik
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <li><button class="dropdown-item" type="button">Giyim</button></li>
+                    <li><button class="dropdown-item" type="button">Ayakkabı</button></li>
+                    <li><button class="dropdown-item" type="button">Aksesuar Çanta </button></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn bg-light btn-outline-light text-dark btn-secondary" type="button" id="dropdownMenu2"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Spor&Outdoor
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <li><button class="dropdown-item" type="button">Giyim</button></li>
+                    <li><button class="dropdown-item" type="button">Ayakkabı</button></li>
+                    <li><button class="dropdown-item" type="button">Aksesuar Çanta </button></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn bg-light btn-outline-light text-dark btn-secondary" type="button" id="dropdownMenu2"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Çok Satanlar <span class="badge bg-danger">Yeni</span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <li><button class="dropdown-item" type="button">Giyim</button></li>
+                    <li><button class="dropdown-item" type="button">Ayakkabı</button></li>
+                    <li><button class="dropdown-item" type="button">Aksesuar Çanta </button></li>
+                </ul>
+            </div>
+
+
+            <div class="dropdown">
+                <button class="btn bg-light btn-outline-light text-dark btn-secondary" type="button" id="dropdownMenu2"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Flaş Ürünler <span class="badge bg-danger">Yeni</span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <li><button class="dropdown-item" type="button">Giyim</button></li>
+                    <li><button class="dropdown-item" type="button">Ayakkabı</button></li>
+                    <li><button class="dropdown-item" type="button">Aksesuar Çanta </button></li>
+                </ul>
+            </div>
+
+
+
+
+
+        </div>
+
+    </header>
+
+    <hr class="text-secondary fw-lighter">
+
+    <main class="container p-3">
+
+        <!-- 3 boxes -->
+
+        <div class="main-banners row justify-content-between p-3">
+            <div class="main-banner col-4">
+                <a href="#">
+                    <img class="img-fluid w-100 rounded-3"
+                        src="images/Siparisinumut_Tepebanner_200223_202302202219.webp" alt="">
+                </a>
+            </div>
+            <div class="main-banner col-4">
+                <a href="#">
+                    <img class="img-fluid w-100 rounded-3" src="/images/Bakanlik1_202302171954.webp" alt="">
+                </a>
+            </div>
+            <div class="main-banner col-4">
+                <a href="#">
+                    <img class="img-fluid w-100 rounded-3" src="/images/Tobb_Tepebanner_0304231_202304061225.webp"
+                        alt="">
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Brands -->
+
+
+        <div class="main-brands d-flex py-5 gap-5 flex-nowrap">
+
+            <div class="main-brands-story d-flex flex-column align-items-center">
+                <a class="text-decoration-none text-dark text-center" href="#">
+                    <img class="img rounded-circle w-100 border" src="images/En_Cok_Satanlar_202302142041.webp" alt="">
+                    <p class="fw-bold">Sana özel</p>
+                </a>
+            </div>
+
+            <div class="main-brands-story d-flex flex-column align-items-center">
+                <img class="img rounded-circle w-100 border" src="/images/Senin_Icin_Sectik_202302142041.webp" alt="">
+                <p class="fw-bold">Sende Al</p>
+            </div>
+
+            <div class=" main-brands-story d-flex flex-column align-items-center">
+                <img class="img rounded-circle w-100 border" src="/images/Screenshot20221128At163430_202211290324.webp"
+                    alt="">
+                <p class="fw-bold">Kurumsal</p>
+            </div>
+
+            <div class="main-brands-story d-flex flex-column align-items-center">
+                <img class="img rounded-circle w-100 border" src="/images/Widget_202305051022.webp" alt="">
+                <p class="fw-bold text-center">Şanslı Çekiliş</p>
+            </div>
+
+            <div class="main-brands-story d-flex flex-column align-items-center">
+                <img class="img rounded-circle w-100 border" src="/images/Puma_202301271558.webp" alt="">
+                <p class="text-align-center fw-bold">Puma</p>
+            </div>
+
+            <div class=" main-brands-story d-flex flex-column align-items-center">
+                <img class="img rounded-circle w-100 border" src="/images/Trendyolmilla_202301280120.webp" alt="">
+                <p class="fw-bold">TrendyolMilla</p>
+            </div>
+
+
+            <div class=" main-brands-story d-flex flex-column align-items-center">
+                <img class="img rounded-circle w-100 border" src="/images/Adidas_202301262144.webp" alt="">
+                <p class="fw-bold">adidas</p>
+            </div>
+
+            <div class=" main-brands-story d-flex flex-column align-items-center">
+                <img class="img rounded-circle w-100 border" src="/images/Apple_202301262111.webp" alt="">
+                <p class="fw-bold">Apple</p>
+            </div>
+
+            <div class=" main-brands-story d-flex flex-column align-items-center">
+                <img class="img rounded-circle w-100 border" src="/images/Xiaomi_202301280236.webp" alt="">
+                <p class="fw-bold">Xiaomi</p>
+            </div>
+
+            <div class=" main-brands-story d-flex flex-column align-items-center">
+                <img class="img rounded-circle w-100 border" src="/images/Tommyhilfiger_202301280121.webp" alt="">
+                <p class="text-center fw-bold">Tommy Hilfigher</p>
+            </div>
+
+        </div>
+
+
+        <!-- Most clicked -->
+        <div id="most-clicked" class="container">
+
+            <div class="main-top-banners d-flex gap-3 pb-5">
+
+                <div class="top-banner rounded-1 bg-success bg-gradient flex-fill">
+                    <p class="h2 py-2 px-5 fw-bold text-center text-black-50 text-success">En Çok Eklenenler</p>
+                </div>
+
+                <div class="top-banner rounded-1 bg-warning bg-gradient flex-fill">
+                    <p class="h2 py-2 px-5 fw-bold text-center text-warning text-black-50">En Çok Öne Çıkanlar</p>
+                </div>
+
+                <div class="top-banner  rounded-1 bg-danger flex-fill">
+                    <p class="h2 py-2 px-5 fw-bold text-center text-black-50 border-5 border-danger">Flaş Ürünler</p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Campaigns  -->
+
+
+        <div class="campaigns card-group d-flex flex-wrap">
+
+            <div class="col-4 p-2">
+                <div class="d-flex position-relative">
+
+                    <img src="/images/ONceKahveKoSEniSonraKahveniHazirlaSingleBanner21_202305021659.webp" alt="..."
+                        class="card-img-top mb-0"></img>
+
+                </div>
+                <div class="bg-dark bt-0 text-white card-text h3">Avva</div>
+            </div>
+
+            <div class="col-4 p-2">
+                <div class="d-flex position-relative">
+
+                    <img src="/images/mobile_20230518121856_ztbutik.webp" alt="..." class="card-img-top mb-0"></img>
+
+                </div>
+                <div class="bg-dark bt-0 text-white card-text h3">Zeynep Tosun x Trendyol</div>
+            </div>
+
+
+            <div class="col-4 p-2">
+                <div class="d-flex position-relative">
+
+                    <img src="/images/mobile_20230517113033_trwomanyenisezonayeniparcalar110523mobile.webp" alt="..."
+                        class="card-img-top mb-0"></img>
+
+                </div>
+                <div class="bg-dark bt-0 text-white card-text h3">Trendyol Milla</div>
+            </div>
+
+
+            <div class="col-4 p-2">
+                <div class="d-flex position-relative">
+
+                    <img src="/images/mobile_20230512152217_2303993ElektronikMobile202305121401.webp" alt="..."
+                        class="card-img-top mb-0"></img>
+
+                </div>
+                <div class="bg-dark bt-0 text-white card-text h3">Kişisel Bakım Aletleri</div>
+            </div>
+
+
+            <div class="col-4 p-2">
+                <div class="d-flex position-relative">
+
+                    <img src="/images/mobile_20230502095252_2307241ErkekMobile202305021201.webp" alt="..."
+                        class="card-img-top mb-0"></img>
+
+                </div>
+                <div class="bg-dark bt-0 text-white card-text h3">Nike</div>
+            </div>
+
+
+            <div class="col-4 p-2">
+                <div class="d-flex position-relative">
+
+                    <img src="/images/mobile_20230517113136_trcolluenisezoncoksik110523mobile.webp" alt="..."
+                        class="card-img-top mb-0"></img>
+
+                </div>
+                <div class="bg-dark bt-0 text-white card-text h3">Trendyol Collection</div>
+            </div>
+
+
+
+
+        </div>
+
+        <!-- Most saled -->
+
+        <div id="main-mostsaledproducts" class="bg-light text-dark border border-dark-50 rounded-3 border-1 my-5 py-5 ">
+
+            <div class="d-flex justify-content-between p-3">
+                <div class="h2 col">
+                    <a class="text-decoration-none text-dark" href="#">Çok Satan Ürünler</a>
+                </div>
+                <div class="h4 col text-end text-decoration-underline">
+                    <a class="text-decoration-none text-dark" href="#">Tüm Ürünler!</a>
+                </div>
+            </div>
+
+
+
+            <div id="mostsaled-products" class="d-flex justify-content-between">
+
+                <div id="mostsaled-product-1" class=" mx-3 my-3 px-1 border rounded-3  border-white-50">
+                    <a href="#"
+                        class="position-relative d-flex flex-wrap text-decoration-none border-0 text-white fs-6 ">
+
+
+                        <div id="product-banner" class="position-absolute w-40 ">
+
+                            <div id="cargo-banner"
+                                class="d-flex justify-content-start align-items-center bg-secondary  col-5  px-1  mt-1 ms-1 fw-lighter">
+
+                                <div class="cargo-logo ">
+                                    <i class="fa-solid fa-cube"></i>
+                                </div>
+
+                                <div class="cargo-text mx-2 fw-light h6">
+                                    KARGO <br> BEDAVA</div>
+                            </div>
+
+                            <div id="mostsaled-banner" class="my-2 ms-2">
+                                <span>
+                                    <img class="img w-25" src="/images/EnCokSatan_202012091129.webp" alt="">
+                                </span>
+                            </div>
+                        </div>
+
+                        <div id="favorite-banner"
+                            class="text-dark border border-dark rounded-circle  my-5  px-2 py-1 fs-4  position-absolute top-0 end-0 ">
+                            <span class="text-dark text-right"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+
+
+                        <div id="product-container" class="">
+                            <div id="most-saled-product-img" class="text-center w-75 mt-5 m-auto">
+                                <img src="/images/MostSaled01.webp" height="240px" alt="..."
+                                    class="img w-100 card-img-top card-title card-text mb-0">
+                                </img>
+                            </div>
+                            <div id="most-saled-prouct-text" class="my-3 mx-3 h6 text-dark fw-light">
+                                <b class="fw-bold">rise and shine </b> Antiperspirant Whitening Roll-on 75 ml
+                                <span class="mx-3 row mt-3 mb-5 h4 py-3 text-danger">109 TL</span>
+                            </div>
+
+                        </div>
+
+                    </a>
+                </div>
+
+                <div id="mostsaled-product-2" class=" mx-3 my-3 px-1 border rounded-3 border-white-50">
+                    <a href="#"
+                        class="position-relative d-flex flex-wrap text-decoration-none border-0 text-white fs-6 ">
+
+
+                        <div id="product-banner" class="position-absolute w-40 ">
+
+                            <div id="cargo-banner"
+                                class="d-flex justify-content-start align-items-center bg-secondary  col-5  px-1  mt-1 ms-1 fw-lighter">
+
+                                <div class="cargo-logo ">
+                                    <i class="fa-solid fa-cube"></i>
+                                </div>
+
+                                <div class="cargo-text mx-2 fw-light h6">
+                                    KARGO <br> BEDAVA</div>
+                            </div>
+
+                            <div id="mostsaled-banner" class="my-2 ms-2">
+                                <span>
+                                    <img class="img w-25" src="/images/Star.webp" alt="">
+                                </span>
+                            </div>
+                        </div>
+
+                        <div id="favorite-banner"
+                            class="text-dark border border-dark rounded-circle  my-5  px-2 py-1 fs-4  position-absolute top-0 end-0 ">
+                            <span class="text-dark text-right"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+
+
+                        <div id="product-container" class="">
+                            <div id="most-saled-product-img" class="text-center w-75 mt-5 m-auto">
+                                <img src="/images/mostSaled02.webp" height="240px" alt="..."
+                                    class="img w-100 card-img-top card-title card-text mb-0">
+                                </img>
+                            </div>
+                            <div id="most-saled-prouct-text" class="my-3 mx-3 h6 text-dark fw-light">
+                                <b class="fw-bold"> Rexona</b> Clinical Protection Kadın Stick Deodorant Shower Clean 45
+                                ml
+
+                                <span class="mx-3 row mt-3 mb-5 h4 py-3 text-danger">159.90 TL</span>
+                            </div>
+
+                        </div>
+
+                    </a>
+                </div>
+
+                <div id="mostsaled-product-3" class=" mx-3 my-3 px-1 border rounded-3  border-white-50">
+                    <a href="#"
+                        class="position-relative d-flex flex-wrap text-decoration-none border-0 text-white fs-6 ">
+
+
+                        <div id="product-banner" class="position-absolute w-40 ">
+
+                            <div id="mostsaled-banner" class="my-2 ms-2">
+                                <span>
+                                    <img class="img w-25" src="/images/EnCokSatan_202012091129.webp" alt="">
+                                </span>
+                            </div>
+                        </div>
+
+                        <div id="favorite-banner"
+                            class="text-dark border border-dark rounded-circle  my-5  px-2 py-1 fs-4  position-absolute top-0 end-0 ">
+                            <span class="text-dark text-right"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+
+
+                        <div id="product-container" class="">
+                            <div id="most-saled-product-img" class="text-center w-75 mt-5 m-auto">
+                                <img src="/images/mostSaled03.webp" height="240px" alt="..."
+                                    class="img w-100 card-img-top card-title card-text mb-0">
+                                </img>
+                            </div>
+                            <div id="most-saled-prouct-text" class="my-3 mx-3 h6 text-dark fw-light">
+                                <b class="fw-bold"> BGK</b> BGK Unisex 10'lu Görünmez Spor Ayakkabı Çorabı
+                                <span class="mx-3 row mt-3 mb-5 h4 py-3 text-danger">59.90 TL</span>
+                            </div>
+
+                        </div>
+
+                    </a>
+                </div>
+
+                <div id="mostsaled-product-4" class=" mx-3 my-3 px-1 border rounded-3 border-white-50">
+                    <a href="#"
+                        class="position-relative d-flex flex-wrap  text-decoration-none border-0 text-white fs-6 ">
+
+
+                        <div id="product-banner" class="position-absolute w-40 ">
+
+                            <div id="cargo-banner"
+                                class="d-flex justify-content-start align-items-center bg-secondary  col-5  px-1  mt-1 ms-1 fw-lighter">
+
+                                <div class="cargo-logo ">
+                                    <i class="fa-solid fa-cube"></i>
+                                </div>
+
+                                <div class="cargo-text mx-2 fw-light h6">
+                                    KARGO <br> BEDAVA</div>
+                            </div>
+
+                            <div id="mostsaled-banner" class="my-2 ms-2">
+                                <span>
+                                    <img class="img w-25" src="/images/EnCokSatan_202012091129.webp" alt="">
+                                </span>
+                            </div>
+                        </div>
+
+                        <div id="favorite-banner"
+                            class="text-dark border border-dark rounded-circle  my-5  px-2 py-1 fs-4  position-absolute top-0 end-0 ">
+                            <span class="text-dark text-right"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+
+
+                        <div id="product-container" class="">
+                            <div id="most-saled-product-img" class="text-center w-75 mt-5 m-auto">
+                                <img src="/images/mostSaled04.webp" height="240px" alt="..."
+                                    class="img w-100 card-img-top card-title card-text mb-0">
+                                </img>
+                            </div>
+                            <div id="most-saled-product-text" class="my-3 mx-3 h6 text-dark fw-light">
+                                <b class="fw-bold"> rise and shine </b>Keratin & Kolajen Saç Bakım Seti
+
+                                <span class="mx-3 row mt-3 mb-5 h4 py-3 text-danger">169 TL</span>
+                            </div>
+
+                        </div>
+
+                    </a>
+                </div>
+
+                <div id="mostsaled-product-5" class=" mx-3 my-3 px-1 border rounded-3 border-white-50">
+                    <a href="#"
+                        class="position-relative d-flex flex-wrap text-decoration-none border-0 text-white fs-6 ">
+
+
+                        <div id="product-banner" class="position-absolute w-40 ">
+
+                            <div id="cargo-banner"
+                                class="d-flex justify-content-start align-items-center bg-success bg-gradient  col-5  px-1  mt-1 ms-1 fw-lighter">
+
+                                <div class="cargo-logo ">
+                                    <i class="fa-solid fa-cube"></i>
+                                </div>
+
+                                <div class="cargo-text mx-2 fw-light h6">
+                                    HIZLI <br> TESLİMAT</div>
+                            </div>
+
+                            <div id="mostsaled-banner" class="my-2 ms-2">
+                                <span>
+                                    <img class="img w-25" src="/images/EnCokSatan_202012091129.webp" alt="">
+                                </span>
+                            </div>
+                        </div>
+
+                        <div id="favorite-banner"
+                            class="text-dark border border-dark rounded-circle  my-5  px-2 py-1 fs-4  position-absolute top-0 end-0 ">
+                            <span class="text-dark text-right"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+
+
+                        <div id="product-container" class="">
+                            <div id="most-saled-product-img" class="text-center w-75 mt-5 m-auto">
+                                <img src="/images/MostSaled05.webp" height="240px" alt="..."
+                                    class="img d-block card-img-top card-title card-text mb-0">
+                                </img>
+                            </div>
+                            <div id="most-saled-prouct-text" class="my-3 mx-3 h6 text-dark fw-light">
+                                <b class="fw-bold"> Rexona</b> 5--Clinical Protection Kadın Stick Deodorant Shower Clean
+
+
+                                <span class="mx-3 row mt-3 mb-5 h4 py-3 text-danger">109 TL</span>
+                            </div>
+
+                        </div>
+
+                    </a>
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+
+
+        <!-- Starred Products -->
+
+        <div id="main-moststarredproducts"
+            class="bg-light text-dark border border-dark-50 rounded-3 border-1 my-5 py-5 ">
+
+            <div class="d-flex justify-content-between p-3">
+                <div class="h2 col">
+                    <a class="text-decoration-none text-dark" href="#">Yıldızlı Ürünler</a>
+                </div>
+                <div class="h4 col text-end text-decoration-underline">
+                    <a class="text-decoration-none text-dark" href="#">Tüm Ürünler!</a>
+                </div>
+            </div>
+
+
+
+            <div id="moststarred-products" class="d-flex justify-content-between">
+
+                <div id="moststarred-product-1" class=" mx-3 my-3 px-1 border rounded-3  border-white-50">
+                    <a href="#"
+                        class="position-relative d-flex flex-wrap text-decoration-none border-0 text-white fs-6 ">
+
+
+                        <div id="product-banner" class="position-absolute w-40 ">
+
+                            <div id="moststarred-banner" class="my-2 ms-2">
+                                <span>
+                                    <img class="img w-25" src="/images/EnCokSatan_202012091129.webp" alt="">
+                                </span>
+                            </div>
+                        </div>
+
+                        <div id="favorite-banner"
+                            class="text-dark border border-dark rounded-circle  my-5  px-2 py-1 fs-4  position-absolute top-0 end-0 ">
+                            <span class="text-dark text-right"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+
+
+                        <div id="product-container" class="">
+                            <div id="most-starred-product-img" class="text-center w-75 mt-5 m-auto">
+                                <img src="/images/moststarred01.webp" height="240px" alt="..."
+                                    class="img w-100 card-img-top card-title card-text mb-0">
+                                </img>
+                            </div>
+                            <div id="most-starred-prouct-text" class="my-3 mx-3 h6 text-dark fw-light">
+                                <b class="fw-bold">rise and shine </b> Antiperspirant Whitening Roll-on 40 ml
+                                <span class="mx-3 row mt-3 mb-5 h4 py-3 text-danger">75 TL</span>
+                            </div>
+
+                        </div>
+
+                    </a>
+                </div>
+
+                <div id="moststarred-product-2" class=" mx-3 my-3 px-1 border rounded-3 border-white-50">
+                    <a href="#"
+                        class="position-relative d-flex flex-wrap text-decoration-none border-0 text-white fs-6 ">
+
+
+                        <div id="product-banner" class="position-absolute w-40 ">
+
+                            <div id="cargo-banner"
+                                class="d-flex justify-content-start align-items-center bg-secondary  col-5  px-1  mt-1 ms-1 fw-lighter">
+
+                                <div class="cargo-logo ">
+                                    <i class="fa-solid fa-cube"></i>
+                                </div>
+
+                                <div class="cargo-text mx-2 fw-light h6">
+                                    KARGO <br> BEDAVA</div>
+                            </div>
+
+                            <div id="moststarred-banner" class="my-2 ms-2">
+                                <span>
+                                    <img class="img w-25" src="/images/EnCokSatan_202012091129.webp" alt="">
+                                </span>
+                            </div>
+                        </div>
+
+                        <div id="favorite-banner"
+                            class="text-dark border border-dark rounded-circle  my-5  px-2 py-1 fs-4  position-absolute top-0 end-0 ">
+                            <span class="text-dark text-right"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+
+
+                        <div id="product-container" class="">
+                            <div id="most-starred-product-img" class="text-center w-75 mt-5 m-auto">
+                                <img src="/images/MostSaled01.webp" height="240px" alt="..."
+                                    class="img w-100 card-img-top card-title card-text mb-0">
+                                </img>
+                            </div>
+                            <div id="most-starred-prouct-text" class="my-3 mx-3 h6 text-dark fw-light">
+                                <b class="fw-bold">rise and shine</b> Antiperspirant Whitening Roll-on - 75 ml
+
+                                <span class="mx-3 row mt-3 mb-5 h4 py-3 text-danger">109 TL</span>
+                            </div>
+
+                        </div>
+
+                    </a>
+                </div>
+
+                <div id="moststarred-product-3" class=" mx-3 my-3 px-1 border rounded-3  border-white-50">
+                    <a href="#"
+                        class="position-relative d-flex flex-wrap text-decoration-none border-0 text-white fs-6 ">
+
+
+                        <div id="product-banner" class="position-absolute w-40 ">
+
+
+                            <div id="cargo-banner"
+                                class="d-flex justify-content-start align-items-center bg-secondary  col-5  px-1  mt-1 ms-1 fw-lighter">
+
+                                <div class="cargo-logo ">
+                                    <i class="fa-solid fa-cube"></i>
+                                </div>
+
+                                <div class="cargo-text mx-2 fw-light h6">
+                                    KARGO <br> BEDAVA</div>
+                            </div>
+
+
+
+                            <div id="moststarred-banner" class="my-2 ms-2">
+                                <span>
+                                    <img class="img w-25" src="/images/Star.webp" alt="">
+                                </span>
+                            </div>
+                        </div>
+
+                        <div id="favorite-banner"
+                            class="text-dark border border-dark rounded-circle  my-5  px-2 py-1 fs-4  position-absolute top-0 end-0 ">
+                            <span class="text-dark text-right"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+
+
+                        <div id="product-container" class="">
+                            <div id="most-starred-product-img" class="text-center w-75 mt-5 m-auto">
+                                <img src="/images/mostSaled02.webp" height="240px" alt="..."
+                                    class="img w-100 card-img-top card-title card-text mb-0">
+                                </img>
+                            </div>
+                            <div id="most-starred-prouct-text" class="my-3 mx-3 h6 text-dark fw-light">
+                                <b class="fw-bold"> Rexona</b> Clinical Protection Kadın Stick Deodorant Shower Clean 45
+                                ml
+                                <span class="mx-3 row mt-3 mb-5 h4 py-3 text-danger">159.90 TL</span>
+                            </div>
+
+                        </div>
+
+                    </a>
+                </div>
+
+                <div id="moststarred-product-4" class=" mx-3 my-3 px-1 border rounded-3 border-white-50">
+                    <a href="#"
+                        class="position-relative d-flex flex-wrap  text-decoration-none border-0 text-white fs-6 ">
+
+
+                        <div id="product-banner" class="position-absolute w-40 ">
+
+                            <div id="moststarred-banner" class="my-2 ms-2">
+                                <span>
+                                    <img class="img w-25" src="/images/EnCokSatan_202012091129.webp" alt="">
+                                </span>
+                            </div>
+                        </div>
+
+                        <div id="favorite-banner"
+                            class="text-dark border border-dark rounded-circle  my-5  px-2 py-1 fs-4  position-absolute top-0 end-0 ">
+                            <span class="text-dark text-right"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+
+
+                        <div id="product-container" class="">
+                            <div id="most-starred-product-img" class="text-center w-75 mt-5 m-auto">
+                                <img src="/images/starredproduct04.webp" height="240px" alt="..."
+                                    class="img w-100 card-img-top card-title card-text mb-0">
+                                </img>
+                            </div>
+                            <div id="most-starred-product-text" class="my-3 mx-3 h6 text-dark fw-light">
+                                <b class="fw-bold"> rise and shine </b>Doğal Kabak Lifli Aloe Vera Sabunu 130 Gr
+
+                                <span class="mx-3 row mt-3 mb-5 h4 py-3 text-danger">59,95 TL</span>
+                            </div>
+
+                        </div>
+
+                    </a>
+                </div>
+
+                <div id="moststarred-product-5" class=" mx-3 my-3 px-1 border rounded-3 border-white-50">
+                    <a href="#"
+                        class="position-relative d-flex flex-wrap text-decoration-none border-0 text-white fs-6 ">
+
+
+                        <div id="product-banner" class="position-absolute w-40 ">
+
+                            <div id="cargo-banner"
+                                class="d-flex justify-content-start align-items-center bg-success bg-gradient  col-5  px-1  mt-1 ms-1 fw-lighter">
+
+                                <div class="cargo-logo ">
+                                    <i class="fa-solid fa-cube"></i>
+                                </div>
+
+                                <div class="cargo-text mx-2 fw-light h6">
+                                    HIZLI <br> TESLİMAT</div>
+                            </div>
+
+                            <div id="moststarred-banner" class="my-2 ms-2">
+                                <span>
+                                    <img class="img w-25" src="/images/EnCokSatan_202012091129.webp" alt="">
+                                </span>
+                            </div>
+                        </div>
+
+                        <div id="favorite-banner"
+                            class="text-dark border border-dark rounded-circle  my-5  px-2 py-1 fs-4  position-absolute top-0 end-0 ">
+                            <span class="text-dark text-right"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+
+
+                        <div id="product-container" class="">
+                            <div id="most-starred-product-img" class="text-center w-75 mt-5 m-auto">
+                                <img src="/images/moststarred05.webp" height="240px" alt="..."
+                                    class="img d-block card-img-top card-title card-text mb-0">
+                                </img>
+                            </div>
+                            <div id="most-starred-prouct-text" class="my-3 mx-3 h6 text-dark fw-light">
+                                <b class="fw-bold">rise and shine</b> Doğal Kabak Lifli Prinç Özlü Sabun Sabun
+                                <span class="mx-3 row mt-3 mb-5 h4 py-3 text-danger">59.95 TL</span>
+                            </div>
+
+                        </div>
+
+                    </a>
+                </div>
+
+
+            </div>
+
+
+
+
+
+        </div>
+
+        <!-- discover products -->
+
+        <div class="campaigns card-group d-flex flex-wrap">
+
+            <div class="col-4 p-2">
+                <div class="d-flex position-relative">
+
+                    <img src="/images/mobile_20230517113033_trwomanyenisezonayeniparcalar110523mobile.webp" alt="..."
+                        class="card-img-top mb-0"></img>
+
+                </div>
+                <div class="bg-dark bt-0 text-white card-text h3">Trendyol Milla</div>
+            </div>
+
+
+
+
+            <div class="col-4 p-2">
+                <div class="d-flex position-relative">
+
+                    <img src="/images/ONceKahveKoSEniSonraKahveniHazirlaSingleBanner21_202305021659.webp" alt="..."
+                        class="card-img-top mb-0"></img>
+
+                </div>
+                <div class="bg-dark bt-0 text-white card-text h3">Avva</div>
+            </div>
+
+            <div class="col-4 p-2">
+                <div class="d-flex position-relative">
+
+                    <img src="/images/mobile_20230518121856_ztbutik.webp" alt="..." class="card-img-top mb-0"></img>
+
+                </div>
+                <div class="bg-dark bt-0 text-white card-text h3">Zeynep Tosun x Trendyol</div>
+            </div>
+
+
+            <div class="col-4 p-2">
+                <div class="d-flex position-relative">
+
+                    <img src="/images/ozelmakyaj.webp" alt="..." class="card-img-top mb-0"></img>
+
+                </div>
+                <div class="bg-dark bt-0 text-white card-text h3">Özel Makyaj Ürünleri</div>
+            </div>
+
+
+            <div class="col-4 p-2">
+                <div class="d-flex position-relative">
+
+                    <img src="/images/mobile_20230512152217_2303993ElektronikMobile202305121401.webp" alt="..."
+                        class="card-img-top mb-0"></img>
+
+                </div>
+                <div class="bg-dark bt-0 text-white card-text h3">Kişisel Bakım Aletleri</div>
+            </div>
+
+            <div class="col-4 p-2">
+                <div class="d-flex position-relative">
+
+                    <img src="/images/defactoyenisezon.webp" alt="..." class="card-img-top mb-0"></img>
+
+                </div>
+                <div class="bg-dark bt-0 text-white card-text h3">defactoyenisezon</div>
+            </div>
+
+
+
+
+            <div class="col-4 p-2">
+                <div class="d-flex position-relative">
+
+                    <img src="/images/mobile_20230502095252_2307241ErkekMobile202305021201.webp" alt="..."
+                        class="card-img-top mb-0"></img>
+
+                </div>
+                <div class="bg-dark bt-0 text-white card-text h3">Nike</div>
+            </div>
+
+
+            <div class="col-4 p-2">
+                <div class="d-flex position-relative">
+
+                    <img src="/images/mobile_20230517113136_trcolluenisezoncoksik110523mobile.webp" alt="..."
+                        class="card-img-top mb-0"></img>
+
+                </div>
+                <div class="bg-dark bt-0 text-white card-text h3">Trendyol Collection</div>
+            </div>
+
+            <div class="col-4 p-2">
+                <div class="d-flex position-relative">
+
+                    <img src="/images/pull&bearyenisezon.webp" alt="..." class="card-img-top mb-0"></img>
+
+                </div>
+                <div class="bg-dark bt-0 text-white card-text h3">pull&bearyenisezon</div>
+            </div>
+
+
+
+
+        </div>
+
+    </main>
+
+    <!-- Explanation page -->
+
+    <hr class="text-secondary fw-lighter ">
+
+    <div id="explanation" class="container">
+
+        <span class="fw-light">
+
+
+            <h1>Tüm İhtiyaçlarınız İçin Tek İhtiyacınız Trendyol!</h1>
+            <p><strong>Türkiye’nin önemli online alışveriş adreslerinden biri olan Trendyol, 2010 yılında modayı herkes
+                    için ulaşılabilir kılmak amacıyla kuruldu.</strong> O günden bugüne giyimden aksesuara, ayakkabıdan
+                kozmetiğe kadar pek çok ürünle beğeni kazanmaya devam ediyor. Trendyol hem farklı zevklere hem de
+                bütçelere hitap eder. Kolay ve güvenli bir deneyim sunar. Üst ve alt giyim kategorilerinde sayısız model
+                üretir ve sunar. Bu koleksiyonlar uygun fiyat avantajıyla sunulur. Her mevsime uygun ürün seçenekleri
+                bulunur. Kışlık seçimlerde kazak, mont, hırka, ceket gibi ürünler baskınken yaz kombinlerinde renkli ve
+                sade tişört modelleri sıklıkla kullanılır. İnce kumaştan üretilen jeanlar ve kapriler de yine yaz ayları
+                için ideal bir seçimler olarak değerlendirilir. Yaz tatili için de bikini takımlarından satın
+                alabilirsiniz. Geniş beden aralığı sayesinde istediğiniz ürünü tercih edebilirsiniz.</p>
+
+            <h2>Modern Tasarımlarıyla Dikkat Çeken Trendyol Markaları</h2>
+            <p>Kıyafet kombinleri seçilen ayakkabıyla tamamlanır. Günlük ayakkabı, spor ayakkabı, topuklu ayakkabı,
+                sandalet, bot ve çizme olmak üzere geniş bir ürün skalası hazırlanır. Kıyafet tasarımları ise hedef
+                kitlenin beklentilerine göre şekillendirilir. Elbiseden gömleğe, tunikten eşofman takımına kadar pek çok
+                kategoride üretim yapılır. Sade, modern, kaliteli ve şık tasarımlar ilgiyle takip edilir. Sezonun trend
+                renkleri ve modelleri hazırlanan kreasyonlarda hissedilir. Üretici markalar çocuklar için farklı
+                tasarımlara imza atarlar. Birbirinden rahat, renkli ve eğlenceli modeller hazırlanır. Kız ve erkek
+                çocukları için farklı kategoriler bulunur. Mevcut çeşitlilik beklentilerin karşılanması noktasında
+                önemlidir. Giyim markaları arasından kendiniz veya çocuğunuz için ideal ürünleri seçebilirsiniz.</p>
+
+            <h2>Trendyol Özel Gün İndirimleriyle Kaçırılmayacak Fırsatlar</h2>
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id voluptatibus dolore deserunt iure reiciendis, a
+            nam sapiente maxime quidem iusto rem. Quia architecto voluptatum modi dolorem sint nobis in optio?
+            Nesciunt eius quod quam quia architecto doloremque voluptate, autem excepturi et a molestiae unde eum rem
+            vitae sint ea necessitatibus obcaecati, asperiores nemo! Quia ducimus voluptate a id suscipit at!
+            Veniam iusto, repudiandae quaerat aut voluptate ab eos itaque quo ratione harum officiis delectus
+            dignissimos laudantium nemo placeat, quia incidunt eius! Doloribus provident tempore tenetur, minima ad
+            voluptate molestias expedita.
+            Sequi est in enim quam labore suscipit molestias quos id, nobis voluptate, cupiditate, nihil similique iusto
+            voluptatum exercitationem consequuntur earum dolores iste accusantium illum unde esse. Architecto veniam
+            quisquam natus.
+            Aut blanditiis autem expedita officiis recusandae magnam provident, praesentium esse facere. Provident hic
+            deleniti ipsam fugit. Obcaecati nemo soluta sint! Nam pariatur nihil possimus deserunt impedit ab quis!
+            Dolore, temporibus!
+
+
+        </span>
+
+
+    </div>
+
+    <hr class="text-secondary fw-lighter">
+
+
+    <div id="populars" class=" container my-5 d-flex justify-content-around">
+
+
+
+
+        <div id="popular-brand" class="d-flex flex-wrap">
+            <h3 class="col-12">Popular Brands</h3>
+
+            <div class="col-4">
+                <a href="#" class="fw-normal text-dark text-decoration-none">
+                    <li class="list-unstyled">Apple</li>
+                </a>
+            </div>
+            <div class="col-4">
+                <a href="#" class="fw-normal text-dark text-decoration-none">
+                    <li class="list-unstyled">Adidas</li>
+                </a>
+            </div>
+            <div class="col-4">
+
+                <a href="#" class="fw-normal text-dark text-decoration-none">
+                    <li class="list-unstyled">Nike</li>
+                </a>
+            </div>
+            <div class="col-4">
+                <a href="#" class="fw-normal text-dark text-decoration-none">
+                    <li class="list-unstyled">Samsung </li>
+                </a>
+            </div>
+            <div class="col-4">
+                <a href="#" class="fw-normal text-dark text-decoration-none">
+                    <li class="list-unstyled">Pupular brand 5 </li>
+                </a>
+            </div>
+            <div class="col-4">
+                <a href="#" class="fw-normal text-dark text-decoration-none">
+                    <li class="list-unstyled">Pupular brand 6 </li>
+                </a>
+            </div>
+
+            <div class="col-4">
+                <a href="#" class="fw-normal text-dark text-decoration-none">
+                    <li class="list-unstyled">Pupular brand 7 </li>
+                </a>
+            </div>
+
+
+            <div class="col-4">
+                <a href="#" class="fw-normal text-dark text-decoration-none">
+                    <li class="list-unstyled">Pupular brand 8 </li>
+                </a>
+            </div>
+
+            <div class="col-4">
+                <a href="#" class="fw-normal text-dark text-decoration-none">
+                    <li class="list-unstyled">Pupular brand 9 </li>
+                </a>
+            </div>
+
+            <div class="col-4">
+                <a href="#" class="fw-normal text-dark text-decoration-none">
+                    <li class="list-unstyled">Pupular brand 10 </li>
+                </a>
+            </div>
+
+            <div class="col-4">
+                <a href="#" class="fw-normal text-dark text-decoration-none">
+                    <li class="list-unstyled">Pupular brand 11 </li>
+                </a>
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+
+        <div id="popular-pages" class="d-flex flex-wrap">
+            <h3 class="col-12">Popular Pages</h3>
+
+            <div class="col-4">
+                <a href="#" class="fw-normal text-dark text-decoration-none">
+                    <li class="list-unstyled">Erkek Giyim</li>
+                </a>
+            </div>
+            <div class="col-4">
+                <a href="#" class="fw-normal text-dark text-decoration-none">
+                    <li class="list-unstyled">Erkek Giyim2</li>
+                </a>
+            </div>
+            <div class="col-4">
+
+                <a href="#" class="fw-normal text-dark text-decoration-none">
+                    <li class="list-unstyled">Erkek Giyim3</li>
+                </a>
+            </div>
+            <div class="col-4">
+                <a href="#" class="fw-normal text-dark text-decoration-none">
+                    <li class="list-unstyled">Erkek Giyim4 </li>
+                </a>
+            </div>
+            <div class="col-4">
+                <a href="#" class="fw-normal text-dark text-decoration-none">
+                    <li class="list-unstyled">Erkek Giyim5 </li>
+                </a>
+            </div>
+            <div class="col-4">
+                <a href="#" class="fw-normal text-dark text-decoration-none">
+                    <li class="list-unstyled">Erkek Giyim6 </li>
+                </a>
+            </div>
+
+            <div class="col-4">
+                <a href="#" class="fw-normal text-dark text-decoration-none">
+                    <li class="list-unstyled">Erkek Giyim7 </li>
+                </a>
+            </div>
+
+
+            <div class="col-4">
+                <a href="#" class="fw-normal text-dark text-decoration-none">
+                    <li class="list-unstyled">Erkek Giyim8 </li>
+                </a>
+            </div>
+
+            <div class="col-4">
+                <a href="#" class="fw-normal text-dark text-decoration-none">
+                    <li class="list-unstyled">Erkek Giyim9 </li>
+                </a>
+            </div>
+
+            <div class="col-4">
+                <a href="#" class="fw-normal text-dark text-decoration-none">
+                    <li class="list-unstyled">Erkek Giyim10 </li>
+                </a>
+            </div>
+
+            <div class="col-4">
+                <a href="#" class="fw-normal text-dark text-decoration-none">
+                    <li class="list-unstyled">Erkek Giyim11 </li>
+                </a>
+            </div>
+
+
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <footer class="bg-dark text-white pt-5">
+
+        <div class="row bg-dark text-white  justify-content-center ">
+
+            <div class="col col-2 text-white">
+
+                <div>
+                    <h1>Trendyol</h1>
+                    <ul>
+
+                        <li class="list-unstyled text-decoration-none m-0 p-0">Kariyer</li>
+                        <li class="list-unstyled text-decoration-none m-0 p-0">İletişim</li>
+                        <li class="list-unstyled text-decoration-none">Trendyol'da Satış Yap</li>
+                        <li class="list-unstyled text-decoration-none">Biz Kimiz</li>
+                    </ul>
+
+
+                    <a class="text-decoration-none text-white fs-4" href="#">Mobil Uygulamalar</a>
+
+
+                    <div class="w-75 py-5">
+
+                        <img src="/images/troy-logo-transparent.webp" alt="" class="col-2 img">
+                        <img src="/images/footer-master-card.webp" class="img col-2" alt="">
+                        <img src="/images/footer-visa-black.webp" class="img col-2" alt="">
+                        <img src="/images/footer-amex.webp" class="img col-2" alt="">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col col-2 text-white ">
+
+
+
+
+                <div>
+                    <h1>About Us</h1>
+
+
+                    <ul>
+
+                        <li class="list-unstyled text-decoration-none">Who we are</li>
+                        <li class="list-unstyled text-decoration-none">Careers</li>
+                        <li class="list-unstyled text-decoration-none">Contact us</li>
+                        <li class="list-unstyled text-decoration-none">Sustainability</li>
+                    </ul>
+
+                    <a class="text-decoration-none text-white fs-4" href="#">Güvenli Alışveriş</a>
+
+
+                    <div class="w-75 py-5">
+
+                        <img src="/images/iosV2.svg" alt="" class="w-50 img mb-2">
+                        <img src="/images/googleV2.svg" class="img w-50 mb-2" alt="">
+                        <img src="/images/huaweiV2.svg" class="img w-50 mb-2" alt="">
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+
+
+            <div class="col col-2 text-white">
+
+                <div>
+                    <h1>Kampanyalar</h1>
+                    <ul class="m-0 p-0" >
+
+                        <li class="list-unstyled text-decoration-none m-0 p-0">Aktif Kampanyalar</li>
+                        <li class="list-unstyled text-decoration-none m-0 p-0">Elite Üyelik</li>
+                        <li class="list-unstyled text-decoration-none m-0 p-0">Hediye Fikirleri</li>
+                        <li class="list-unstyled text-decoration-none m-0 p-0">Trendyol Fırsatları</li>
+                    </ul>
+
+                    <h4 class="my-2">Sosyal Medya</h4>
+
+                    <div class="w-75 py-3 ">
+                        <img src="/images/facebook.svg" alt="" class="col-2 img">
+                        <img src="/images/instagram.svg" class="img col-2" alt="">
+                        <img src="/images/twitter.svg" class="img col-2" alt="">
+                        <img src="/images/youtube.svg" class="img col-2" alt="">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col col-2 text-white">
+
+                <div>
+                    <h1>Yardım</h1>
+                    <ul class="m-0 p-0" >
+
+                        <li class="list-unstyled text-decoration-none m-0 p-0">Sıkça Sorulan Sorular</li>
+                        <li class="list-unstyled text-decoration-none m-0 p-0">Canlı Yardım</li>
+                        <li class="list-unstyled text-decoration-none m-0 p-0">Nasıl İade Edebilirim</li>
+                        <li class="list-unstyled text-decoration-none m-0 p-0">İşlerim Rehberi</li>
+                    </ul>
+
+                    <div class="btn text-white ">Ülke Değiştir</div>
+
+                    <div class="w-50 py-3 d-flex gap-3">
+                        <img src="/images/etbis-qr.webp" alt="" class="w-50     img">
+                        <img src="/images/trgo.webp" class="img w-50" alt="">
+       
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div id="subfooter" class="bg-secondary d-flex justify-content-around">
+
+            <div>©2023 DSM Grup Danışmanlık İletişim ve Satış Tic.A.Ş.-Her Hakkı Saklıdı</div>
+            <div>Çerez Tercihleri</div>
+            <div>KVK ve Gizlilik Politikası</div>
+            <div>ullanım Koşulları
+            </div> 
+            <div>  DSM GrupK</div> 
+r.
+
+        </div>
+
+    </footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+        integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+        integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
